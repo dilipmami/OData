@@ -1,2 +1,0 @@
-# OData
-Created with CodeSandbox
