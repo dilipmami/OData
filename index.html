@@ -9,29 +9,26 @@
     <ui5-title>UI5 Web Components are here!</ui5-title>
     <br /><br />
 
-    <ui5-messagestrip type="Warning" hide-close-button>
-      Welcome to ODATA Testing : from STE Performance Tea
-    </ui5-messagestrip>
     <br /><br />
+    <ui5-label>APP ID</ui5-label>
+    <ui5-input value="Enter APP ID"></ui5-input>
 
     <br /><br />
-    <ui5-label>Simple Label</ui5-label>
-    <ui5-button design="Default">Enabled</ui5-button>
+    <ui5-label>Main Runs</ui5-label>
+    <ui5-input value="Enter # of iterations"></ui5-input>
+    <br /><br />
+    <ui5-button design="Default">Search</ui5-button>
     <ui5-button type="Positive">Positive</ui5-button>
     <ui5-button type="Negative">Negative</ui5-button>
     <br /><br />
-
+    <ui5-select class="select">
+      <ui5-option>Phone</ui5-option>
+      <ui5-option>Tablet</ui5-option>
+      <ui5-option selected>Desktop</ui5-option>
+    </ui5-select>
+    <br /><br />
     <ui5-switch type="Graphical" checked></ui5-switch>
-    <br />
-    <ui5-button id="openDialogButton">Open Dialog</ui5-button>
-    <br />
 
-    <ui5-dialog id="hello-dialog" header-text="Dialogs are easy!">
-      <div stype="padding: 2rem; display:flex; justify-content: center;">
-        Hello World!
-        <ui5-button id="closeDialogButton">Dismiss</ui5-button>
-      </div>
-    </ui5-dialog>
     <script src="src/index.js"></script>
   </body>
 </html>
