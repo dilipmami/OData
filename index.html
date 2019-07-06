@@ -3,6 +3,14 @@
   <head>
     <title>UI5 Web Components</title>
     <meta charset="UTF-8" />
+    <style>
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+      </style>
   </head>
 
   <body style="position: initial">
@@ -10,30 +18,33 @@
     <br /><br />
 
     <br /><br />
-    <ui5-label>APP ID</ui5-label>
+    
+    <ui5-panel accessible-role="Complementary" class="full-width">
+
+        <div slot="header" class="header">
+            <div>
+                <ui5-label>APP ID</ui5-label>
     <ui5-input value="Enter APP ID"></ui5-input>
 
-    <br /><br />
     <ui5-label>Main Runs</ui5-label>
     <ui5-input value="Enter # of iterations"></ui5-input>
     <br /><br />
     <ui5-button design="Default">Search</ui5-button>
     <ui5-button design="Default">Get OData</ui5-button>
-    <ui5-button design="Positive" icon="sap-icon://add"
-      >Add New OData</ui5-button
-    >
+    <ui5-button design="Positive" icon="sap-icon://add">Add New OData</ui5-button>
     <ui5-button design="Default">Execute</ui5-button>
     <ui5-button design="Emphasized">Reset</ui5-button>
     <ui5-button design="Default">Auto</ui5-button>
     <ui5-button design="Default">Edit</ui5-button>
     <ui5-button design="Default" icon="sap-icon://accept">Update</ui5-button>
 
-    <br /><br />
     <ui5-select class="select">
       <ui5-option>1902</ui5-option>
       <ui5-option selected>1905</ui5-option>
     </ui5-select>
-    <br /><br />
+
+   
+    </ui5-panel>
     <ui5-switch type="Graphical" checked></ui5-switch>
 
     <script src="src/index.js"></script>
