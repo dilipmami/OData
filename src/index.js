@@ -13,6 +13,7 @@ import "@ui5/webcomponents/dist/Table.js";
 const getBt = document.getElementById("getBt");
 getBt.addEventListener("press", () => {
   var data = "test";
+  alert("hi");
   var xhr = new XMLHttpRequest();
   // xhr.withCredentials = false;
   xhr.addEventListener("readystatechange", function() {
@@ -23,13 +24,13 @@ getBt.addEventListener("press", () => {
       var arrLen = arrObj.length;
       alert(JSON.stringify(data));
     }
-    xhr.open(
-      "GET",
-      "https://myhanai065970trial.hanatrial.ondemand.com/sap/hana/xs/admin/appMyOdata/services.xsodata/myODataURL5?$format=json",
-      true
-    );
-    xhr.setRequestHeader("x-csrf-token", "Fetch");
-    xhr.setRequestHeader("Authorization", "Basic TUFNSUQ6QmxyMTIzNDUq");
-    xhr.send(data);
   });
+  xhr.open(
+    "GET",
+    "https://myhanai065970trial.hanatrial.ondemand.com/sap/hana/xs/admin/appMyOdata/services.xsodata/myODataURL5?$format=json",
+    true
+  );
+  xhr.setRequestHeader("x-csrf-token", "Fetch");
+  xhr.setRequestHeader("Authorization", "Basic TUFNSUQ6QmxyMTIzNDUq");
+  xhr.send(data);
 });
