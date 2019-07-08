@@ -9,6 +9,8 @@ import "@ui5/webcomponents/dist/Title.js";
 import "@ui5/webcomponents/dist/Select.js";
 import "@ui5/webcomponents/dist/Option.js";
 import "@ui5/webcomponents/dist/Table.js";
+import "@ui5/webcomponents/dist/TextArea";
+import "@ui5/webcomponents/dist/Input.js";
 
 const getBt = document.getElementById("getBt");
 getBt.addEventListener("press", () => {
@@ -17,7 +19,7 @@ getBt.addEventListener("press", () => {
   var xhr = new XMLHttpRequest();
   // xhr.withCredentials = false;
   xhr.addEventListener("readystatechange", function() {
-    if (this.readyState === this.DONE && this.status == 200) {
+    if (this.readyState === this.DONE && this.status === 200) {
       console.log(this.reponseText);
       var data = JSON.parse(this.responseText).d.results;
       var arrObj = data;
