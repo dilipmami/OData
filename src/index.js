@@ -11,6 +11,7 @@ import "@ui5/webcomponents/dist/Option.js";
 import "@ui5/webcomponents/dist/Table.js";
 import "@ui5/webcomponents/dist/TextArea";
 import "@ui5/webcomponents/dist/Input.js";
+import "@ui5/webcomponents/dist/features/InputSuggestions.js";
 
 const getBt = document.getElementById("getBt");
 getBt.addEventListener("press", () => {

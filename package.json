@@ -8,7 +8,9 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@ui5/webcomponents": "1.0.0-rc.2"
+    "@ui5/webcomponents": "1.0.0-rc.2",
+    "@ui5/webcomponents-base": "0.15.0",
+    "@ui5/webcomponents-core": "0.15.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
