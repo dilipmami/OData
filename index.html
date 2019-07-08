@@ -1,103 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>UI5 Web Components</title>
+    <meta charset="UTF-8" />
+    <style>
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+      </style>
+  </head>
+  <script src="src/index.js"></script>
+  <script src="src/getUrlsFromDB.js"></script>
+  <body style="position: initial">
+    <ui5-title>UI5 Web Components are here!</ui5-title>
+    <br /><br />
 
-<head>
-  <title>UI5 Web Components</title>
-  <meta charset="UTF-8" />
-  <style>
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-  </style>
-</head>
+    <br /><br />
+    
+    <ui5-panel accessible-role="Complementary" class="full-width">
 
-<script src="src/index.js"></script>
-<script src="src/getUrlsFromDB.js"></script>
+        <div slot="header" class="header">
+            <div>
+                <ui5-label required>APP ID</ui5-label>
+    <ui5-input style="width: 90px" type="text" max-length="5"></ui5-input>
+    <ui5-label required>Main Runs</ui5-label>
+    <ui5-input style="width: 70px" type="Number" max-Length="2"></ui5-input>
+    <ui5-button>Search</ui5-button>
+    
+    <ui5-button id="getBt" design="Default">Get OData</ui5-button>
+    <ui5-button design="Emphasized">Reset</ui5-button>
+    <ui5-button design="Default">Auto</ui5-button>
+    <br /><br />
+    <ui5-button design="Default">Execute</ui5-button>  
+      
+    <ui5-button design="Default">Edit</ui5-button>
+    <ui5-button design="Default" icon="sap-icon://accept">Update</ui5-button>
+    <br /><br />
+    <ui5-button design="Positive" icon="sap-icon://add">Add New OData</ui5-button>
+    <ui5-select class="select">
+      <ui5-option>1902</ui5-option>
+      <ui5-option selected>1905</ui5-option>
+    </ui5-select>
+    <br /><br />
+    
+    <ui5-select class="select">
+      <ui5-option selected>Simple</ui5-option>
+      <ui5-option>Complex Common</ui5-option>
+      <ui5-option >Complex High</ui5-option>
+    </ui5-select>
+    <br /><br />
+    
+    <ui5-select class="select">
+      <ui5-option selected>Step1</ui5-option>
+      <ui5-option>Step2</ui5-option>
+      <ui5-option >Step3</ui5-option>
+    </ui5-select>
+    <!-- Header -->
+<div class="header">
+    <span>Results - resize your browser to make some columns pop-in</span>
+    <button id="toggleSticky" style="height: 32px">Toggle Sticky Column Header</button>
+  </div>
+  
+  <ui5-table class="demo-table" id="table">
+    <!-- Columns -->
+    <ui5-table-column slot="columns" width="12em">
+      <span style="line-height: 1.4rem">Release</span>
+    </ui5-table-column>
+  
+    <ui5-table-column slot="columns" min-width="600">
+      <span style="line-height: 1.4rem">App Id</span>
+    </ui5-table-column>
+  
+    <ui5-table-column slot="columns" min-width="600" >
+      <span style="line-height: 1.4rem"> App Type </span>
+    </ui5-table-column>
+  
+    <ui5-table-column slot="columns" min-width="600" >
+      <span style="line-height: 1.4rem">Complexity</span>
+    </ui5-table-column>
+  
+    <ui5-table-column slot="columns" popin-text="OData Url" demand-popin >
+      <span style="line-height: 1.4rem">OData Url</span>
+    </ui5-table-column>
+  
+    <ui5-table-column slot="columns" min-width="200">
+        <span style="line-height: 1.4rem">StepName </span>
+      </ui5-table-column>
 
-<body style="position: initial">
-  <ui5-title>Performance Team !</ui5-title>
-  <br /><br />
-
-  <br /><br />
-
-  <ui5-panel accessible-role="Complementary" class="full-width">
-
-    <div slot="header" class="header">
-      <div>
-        <ui5-label required>APP ID</ui5-label>
-        <ui5-input style="width: 90px" type="text" max-length="5"></ui5-input>
-        <ui5-label required>Main Runs</ui5-label>
-        <ui5-input style="width: 70px" type="Number" max-length="2"></ui5-input>
-        <ui5-button>Search</ui5-button>
-
-        <ui5-button id="getBt" design="Default">Get OData</ui5-button>
-        <ui5-button design="Emphasized">Reset</ui5-button>
-        <ui5-button design="Default">Auto</ui5-button>
-        <br /><br />
-        <ui5-button design="Default">Execute</ui5-button>
-
-        <ui5-button design="Default">Edit</ui5-button>
-        <ui5-button design="Default" icon="sap-icon://accept">Update</ui5-button>
-        <br /><br />
-        <ui5-button design="Positive" icon="sap-icon://add">Add New OData</ui5-button>
-        <ui5-select class="select">
-          <ui5-option>1902</ui5-option>
-          <ui5-option selected>1905</ui5-option>
-        </ui5-select>
-        <br /><br />
-
-        <ui5-select class="select">
-          <ui5-option selected>Simple</ui5-option>
-          <ui5-option>Complex Common</ui5-option>
-          <ui5-option>Complex High</ui5-option>
-        </ui5-select>
-        <br /><br />
-
-        <ui5-select class="select">
-          <ui5-option selected>Step1</ui5-option>
-          <ui5-option>Step2</ui5-option>
-          <ui5-option>Step3</ui5-option>
-        </ui5-select>
-        <!-- Header -->
-        <div class="header">
-          <span>Results - resize your browser to make some columns pop-in</span>
-          <button id="toggleSticky" style="height: 32px">Toggle Sticky Column Header</button>
-        </div>
-
-        <ui5-table class="demo-table" id="table">
-          <!-- Columns -->
-          <ui5-table-column slot="columns" width="12em">
-            <span style="line-height: 1.4rem">Release</span>
-          </ui5-table-column>
-
-          <ui5-table-column slot="columns" min-width="600">
-            <span style="line-height: 1.4rem">App Id</span>
-          </ui5-table-column>
-
-          <ui5-table-column slot="columns" min-width="600">
-            <span style="line-height: 1.4rem"> App Type </span>
-          </ui5-table-column>
-
-          <ui5-table-column slot="columns" min-width="600">
-            <span style="line-height: 1.4rem">Complexity</span>
-          </ui5-table-column>
-
-          <ui5-table-column slot="columns" popin-text="OData Url" demand-popin>
-            <span style="line-height: 1.4rem">OData Url</span>
-          </ui5-table-column>
-
-          <ui5-table-column slot="columns" min-width="200">
-            <span style="line-height: 1.4rem">StepName </span>
-          </ui5-table-column>
-
-        </ui5-table>
+  </ui5-table>
+   
 
 
-
-
-</body>
-
+    
+  </body>
 </html>
